@@ -1,0 +1,24 @@
+.scheduler-form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  align-items: end;
+}
+
+.loading {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 12px;
+  color: #4b5563;
+}
+
+.error {
+  color: #b91c1c;
+  margin: 12px 0 0;
+}
+
+.success {
+  color: #15803d;
+  margin: 12px 0 0;
+}

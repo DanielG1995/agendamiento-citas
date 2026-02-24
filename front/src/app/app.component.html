@@ -1,0 +1,21 @@
+<mat-toolbar color="primary" class="app-toolbar">
+  <span>{{ title }}</span>
+</mat-toolbar>
+
+<div class="app-shell">
+  <mat-tab-group
+    animationDuration="200ms"
+    [(selectedIndex)]="selectedIndex"
+    (selectedIndexChange)="onTabChange($event)"
+  >
+    <mat-tab label="Consulta de historial">
+      <app-appointment-history [searchRequest]="historySearch"></app-appointment-history>
+    </mat-tab>
+    <mat-tab label="Agendamiento de citas">
+      <app-appointment-scheduler
+        [resetSignal]="schedulerResetNonce"
+        (appointmentCreated)="onAppointmentCreated($event)"
+      ></app-appointment-scheduler>
+    </mat-tab>
+  </mat-tab-group>
+</div>

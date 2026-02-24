@@ -1,0 +1,44 @@
+.history-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.history-form mat-form-field {
+  flex: 1 1 240px;
+}
+
+.history-form button {
+  height: 56px;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  padding: 16px 0;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-radius: 8px;
+  background: #ffffff;
+}
+
+.mat-header-cell {
+  font-weight: 600;
+}
+
+.error {
+  color: #b91c1c;
+  margin: 8px 0 0;
+}
+
+.empty {
+  margin: 8px 0 0;
+  color: #6b7280;
+}

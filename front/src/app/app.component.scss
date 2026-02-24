@@ -1,0 +1,22 @@
+.app-toolbar {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+.app-shell {
+  padding: 24px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+mat-tab-group {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 8px 16px 16px;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+}
+
+mat-tab-body {
+  padding-top: 16px;
+}

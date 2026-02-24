@@ -1,0 +1,13 @@
+@baseUrl = https://localhost:5001
+
+### Obtener citas por placa
+GET {{baseUrl}}/api/appointments?plate=PDF-1234
+
+### Crear cita
+POST {{baseUrl}}/api/appointments
+Content-Type: application/json
+
+{
+  "plate": "PDF-1234",
+  "scheduledAt": "2026-03-02T08:30:00"
+}

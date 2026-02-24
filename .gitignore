@@ -1,0 +1,29 @@
+.DS_Store
+
+# Node / Angular
+front/node_modules/
+front/dist/
+front/.angular/
+front/coverage/
+front/.cache/
+front/.vscode/
+front/*.log
+
+# .NET / C#
+back/**/bin/
+back/**/obj/
+back/**/.vs/
+back/**/.idea/
+back/**/*.user
+back/**/*.suo
+back/**/*.userosscache
+back/**/*.sln.docstates
+back/**/TestResults/
+back/**/logs/
+back/**/*.log
+
+# .NET SDK caches inside repo
+back/.dotnet/
+back/.dotnet_cli/
+back/.nuget/
+back/.home/

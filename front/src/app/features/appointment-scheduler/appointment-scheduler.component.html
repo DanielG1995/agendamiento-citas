@@ -1,0 +1,53 @@
+<mat-card>
+ <mat-card-content>
+    <form class="scheduler-form" [formGroup]="form" (ngSubmit)="onSubmit()">
+      <mat-form-field appearance="outline">
+        <mat-label>Placa</mat-label>
+        <input matInput formControlName="plate" placeholder="PDF-1234" />
+        <mat-error *ngIf="form.controls.plate.hasError('required')">
+          La placa es obligatoria.
+        </mat-error>
+        <mat-error *ngIf="form.controls.plate.hasError('pattern')">
+          Formato inválido. Ejemplo: PDF-1234.
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Fecha</mat-label>
+        <input
+          matInput
+          [matDatepicker]="picker"
+          [matDatepickerFilter]="dateFilter"
+          formControlName="date"
+        />
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+        <mat-error *ngIf="form.controls.date.hasError('required')">
+          Selecciona una fecha.
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Hora</mat-label>
+        <mat-select formControlName="time" [disabled]="!form.controls.date.value">
+          <mat-option *ngFor="let slot of timeSlots" [value]="slot">
+            {{ slot }}
+          </mat-option>
+        </mat-select>
+        <mat-hint *ngIf="!form.controls.date.value">
+          Selecciona primero la fecha.
+        </mat-hint>
+        <mat-error *ngIf="form.controls.time.hasError('required')">
+          Selecciona una hora.
+        </mat-error>
+      </mat-form-field>
+
+      <button mat-raised-button color="primary" type="submit" [disabled]="saving">
+        Agendar
+      </button>
+    </form>
+
+    <p class="error" *ngIf="errorMessage">{{ errorMessage }}</p>
+    <p class="success" *ngIf="successMessage">{{ successMessage }}</p>
+  </mat-card-content>
+</mat-card>
