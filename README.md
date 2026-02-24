@@ -15,3 +15,7 @@ Desde la raiz del repositorio, puedes levantar ambos proyectos en paralelo con:
 Notas:
 - Ejecuta `npm install` dentro de `front/` la primera vez.
 - Si necesitas detener ambos procesos, usa `Ctrl+C` en la terminal.
+
+
+Videos explicativos
+https://drive.google.com/drive/folders/1Fpp-MKmCuvlW4gN68fo4fqAPTOTAw99v?usp=drive_link
